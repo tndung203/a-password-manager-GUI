@@ -20,25 +20,12 @@ def generate_password():
     password_list_3 = [random.choice(numbers) for _ in range(nr_numbers)]
     password_list = password_list_1 + password_list_2 + password_list_3
 
-    # for char in range(nr_letters):
-    #   password_list.append(random.choice(letters))
-    #
-    # for char in range(nr_symbols):
-    #   password_list += random.choice(symbols)
-    #
-    # for char in range(nr_numbers):
-    #   password_list += random.choice(numbers)
-
     random.shuffle(password_list)
 
     password = "".join(password_list)
-    # password = ""
-    # for char in password_list:
-    #   password += char
     pass_entry.insert(0,password)
     pyperclip.copy(password)
 
-    # print(f"Your password is: {password}")
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_password():
